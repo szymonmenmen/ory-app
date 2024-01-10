@@ -11,6 +11,7 @@ function Callback() {
         "content-type": "application/x-www-form-urlencoded"
       }
       const code_verifier = localStorage.getItem("CODE_VERIFIER");
+     const redirect_uri=  localStorage.getItem("REDIRECT_URL");
       api.post(
          "/oauth2/token",
         new URLSearchParams({
@@ -18,6 +19,7 @@ function Callback() {
           code: authorizationCode,
           client_id: "3521db1d-d51d-46a5-97bd-af364ee07f37",
           code_verifier: code_verifier,
+          redirect_uri: redirect_uri
         })
       ,  { headers });
     } catch (ex) {
