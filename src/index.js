@@ -14,6 +14,11 @@ export function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home />} />
+        <Route
+        path="self-service/methods/oidc/callback/spotify"
+        exact
+        element={<Callback />}
+      />
         <Route path="callback" exact element={<Callback />} />
       </Routes>
     </BrowserRouter>
