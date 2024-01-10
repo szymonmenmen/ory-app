@@ -48,7 +48,7 @@ function Home() {
     );
     console.log("Code_challenge", code_challenge);
 
-    window.location.href = `https://strange-mayer-6ttl9at1pm.projects.oryapis.com/oauth2/auth?response_type=code&client_id=3521db1d-d51d-46a5-97bd-af364ee07f37&redirect_uri=${redirectUrl}&state=${state}&scope=openid&code_challenge_method=S256&code_challenge=${code_challenge}`;
+    window.location.href = `https://strange-mayer-6ttl9at1pm.projects.oryapis.com/oauth2/auth?response_type=code&client_id=3521db1d-d51d-46a5-97bd-af364ee07f37&redirect_uri=${redirectUrl}&state=${state}&scope=openid+user:email&code_challenge_method=S256&code_challenge=${code_challenge}`;
   };
 
   return (
