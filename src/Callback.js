@@ -6,6 +6,9 @@ function Callback() {
   const [searchParams] = useSearchParams();
   const authorize = async (authorizationCode) => {
     try {
+      const headers = {
+        "Access-Control-Allow-Origin": "*"
+      }
       const code_verifier = localStorage.getItem("CODE_VERIFIER");
       api.post(
          "/oauth2/token",
@@ -15,7 +18,7 @@ function Callback() {
           client_id: "3521db1d-d51d-46a5-97bd-af364ee07f37",
           code_verifier: code_verifier,
         })
-      );
+      ,  { headers });
     } catch (ex) {
       window.console.log("ex", ex);
     }
