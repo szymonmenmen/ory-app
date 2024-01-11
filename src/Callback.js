@@ -8,7 +8,8 @@ function Callback() {
     try {
       const headers = {
         "Access-Control-Allow-Origin": "https://strange-mayer-6ttl9at1pm.projects.oryapis.com",
-        "content-type": "application/x-www-form-urlencoded"
+        "Access-Control-Request-Headers": "access-control-allow-origin, Content-type",
+        "Content-type": "application/x-www-form-urlencoded"
       }
       const code_verifier = localStorage.getItem("CODE_VERIFIER");
      const redirect_uri=  localStorage.getItem("REDIRECT_URL");
