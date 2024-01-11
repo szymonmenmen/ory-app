@@ -7,7 +7,6 @@ function Callback() {
   const authorize = async (authorizationCode) => {
     try {
       const headers = {
-        "Access-Control-Allow-Origin": "*",
         "content-type": "application/x-www-form-urlencoded"
       }
       const code_verifier = localStorage.getItem("CODE_VERIFIER");
